@@ -1,0 +1,5 @@
+{
+  "info.zombie_player.zombie_player": "僵尸%s",
+  "entity.zombie_player.zombie_player": "僵尸玩家",
+  "effect.zombie_player.infection": "感染"
+}

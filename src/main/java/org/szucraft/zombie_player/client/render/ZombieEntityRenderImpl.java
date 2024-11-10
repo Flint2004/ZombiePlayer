@@ -1,10 +1,10 @@
-package org.szucraft.match.client.render;
+package org.szucraft.zombie_player.client.render;
 
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.ZombieBaseEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
-import org.szucraft.match.entity.ZombiePlayerEntity;
+import org.szucraft.zombie_player.entity.ZombiePlayerEntity;
 
 public class ZombieEntityRenderImpl extends ZombieBaseEntityRenderer<ZombiePlayerEntity, ZombiePlayerEntityModel<ZombiePlayerEntity>> {
 

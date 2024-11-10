@@ -1,0 +1,5 @@
+{
+  "info.zombie_player.zombie_player": "Zombified %s",
+  "entity.zombie_player.zombie_player": "Zombified Player",
+  "effect.zombie_player.infection": "Infection"
+}

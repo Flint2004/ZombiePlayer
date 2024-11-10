@@ -1,4 +1,4 @@
-package org.szucraft.match.mixin;
+package org.szucraft.zombie_player.mixin;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.szucraft.match.Match;
+import org.szucraft.zombie_player.ZombiePlayer;
 
 import java.util.Random;
 
@@ -28,7 +28,7 @@ public abstract class PlayerInfectionMixin extends LivingEntity {
         if (source.getAttacker() instanceof ZombieEntity) {
             Random random = new Random();
             if (random.nextBoolean()) {
-                this.setStatusEffect(new StatusEffectInstance(Match.INFECTION_EFFECT, 200, 0), source.getSource());
+                this.setStatusEffect(new StatusEffectInstance(ZombiePlayer.INFECTION_EFFECT, 200, 0), source.getSource());
             }
         }
     }

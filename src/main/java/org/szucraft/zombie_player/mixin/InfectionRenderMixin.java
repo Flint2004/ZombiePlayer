@@ -1,4 +1,4 @@
-package org.szucraft.match.mixin;
+package org.szucraft.zombie_player.mixin;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -12,8 +12,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.szucraft.match.Match;
-import org.szucraft.match.client.gui.HudHandler;
+import org.szucraft.zombie_player.ZombiePlayer;
+import org.szucraft.zombie_player.client.gui.HudHandler;
 
 @Environment(EnvType.CLIENT)
 @Mixin(InGameHud.class)
@@ -26,7 +26,7 @@ public abstract class InfectionRenderMixin {
     @Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;getFrozenTicks()I"), method = "render")
     private void renderInfection(DrawContext context, float tickDelta, CallbackInfo ci) {
         assert this.client.player != null;
-        if (this.client.player.hasStatusEffect(Match.INFECTION_EFFECT)) {
+        if (this.client.player.hasStatusEffect(ZombiePlayer.INFECTION_EFFECT)) {
             this.renderOverlay(context, HudHandler.INFECTION_BLUR, 1.0F);
         }
     }

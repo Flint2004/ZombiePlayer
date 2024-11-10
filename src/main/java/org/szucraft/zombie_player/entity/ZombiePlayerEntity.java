@@ -1,4 +1,4 @@
-package org.szucraft.match.entity;
+package org.szucraft.zombie_player.entity;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -13,7 +13,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
-import org.szucraft.match.util.PlayerSkinCache;
+import org.szucraft.zombie_player.util.PlayerSkinCache;
 
 import java.util.Objects;
 import java.util.Optional;

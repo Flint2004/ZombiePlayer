@@ -1,4 +1,4 @@
-package org.szucraft.match.util;
+package org.szucraft.zombie_player.util;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.minecraft.MinecraftProfileTexture;

@@ -1,4 +1,4 @@
-package org.szucraft.match.mixin;
+package org.szucraft.zombie_player.mixin;
 
 import com.mojang.authlib.GameProfile;
 import net.minecraft.client.MinecraftClient;
@@ -14,8 +14,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.szucraft.match.Match;
-import org.szucraft.match.entity.ZombiePlayerEntity;
+import org.szucraft.zombie_player.ZombiePlayer;
+import org.szucraft.zombie_player.entity.ZombiePlayerEntity;
 
 @Mixin(ServerPlayerEntity.class)
 public abstract class PlayerDeathMixin extends LivingEntity {
@@ -28,8 +28,8 @@ public abstract class PlayerDeathMixin extends LivingEntity {
 
     @Inject(at = @At(value = "TAIL"), method = "onDeath")
     public void onPlayerDeath(DamageSource damageSource, CallbackInfo ci) {
-        if (this.hasStatusEffect(Match.INFECTION_EFFECT)) {
-            ZombiePlayerEntity zombiePlayerEntity = Match.ZOMBIE_PLAYER.create(this.getServerWorld());
+        if (this.hasStatusEffect(ZombiePlayer.INFECTION_EFFECT)) {
+            ZombiePlayerEntity zombiePlayerEntity = ZombiePlayer.ZOMBIE_PLAYER.create(this.getServerWorld());
             if (zombiePlayerEntity != null) {
                 zombiePlayerEntity.setPersistent();
                 zombiePlayerEntity.refreshPositionAndAngles(this.getX(), this.getY(), this.getZ(), this.getYaw(), this.getPitch());

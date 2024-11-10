@@ -1,11 +1,11 @@
-package org.szucraft.match.client.render;
+package org.szucraft.zombie_player.client.render;
 
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.client.util.math.MatrixStack;
-import org.szucraft.match.entity.ZombiePlayerEntity;
+import org.szucraft.zombie_player.entity.ZombiePlayerEntity;
 
 public class ZombiePlayerEntityRenderer extends ZombieEntityRenderImpl {
 

@@ -1,4 +1,4 @@
-package org.szucraft.match.effect;
+package org.szucraft.zombie_player.effect;
 
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
