@@ -1,0 +1,5 @@
+{
+  "info.match.zombie_player": "Zombified %s",
+  "entity.match.zombie_player": "Zombified Player",
+  "effect.match.infection": "Infection"
+}
